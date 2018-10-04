@@ -90,6 +90,6 @@ public class FlightCollection {
 	}
 	
 	public static ArrayList<FlightPojo> morningFlights(String source, String destination){
-		return (ArrayList<FlightPojo>) flightList.stream().filter(flight->flight.getDepartureTime()<1200).filter(flight->flight.getDepartureTime()<1200).filter(flight->flight.getSource().equals(source)).filter(flight->flight.getDestination().equals(destination)).collect(Collectors.toList());
+		return (ArrayList<FlightPojo>) flightList.stream().filter(flight->flight.getDepartureTime()>600).filter(flight->flight.getDepartureTime()<1200).filter(flight->flight.getSource().equals(source)).filter(flight->flight.getDestination().equals(destination)).collect(Collectors.toList());
 	}
 }
